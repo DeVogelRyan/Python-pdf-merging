@@ -1,5 +1,5 @@
 import sys
-from PyPDF2 import PdfFileMerger
+from PyPDF2 import PdfMerger
 
 def getArgs():
     argList = sys.argv
@@ -11,7 +11,7 @@ def getArgs():
         print("python main.py [pdf1.pdf] [pdf2.pdf] ... [output.pdf]")
 
 def mergePdf(pdflist, output):
-    merger = PdfFileMerger()
+    merger = PdfMerger()
     for pdf in pdflist:
         merger.append(pdf)
 
